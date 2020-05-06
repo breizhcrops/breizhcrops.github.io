@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <title>Breizhcrops</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://carto.com/favicon.ico" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link rel="shortcut icon" href="http://sstatic.net/so/favicon.ico">
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<style>
+.row {
+  margin-bottom: 30px
+}
+</style>
+
+</head>
+
+    <body>
+      <div class="container">
+      <div class="jumbotron">
+          <h1>Breizhcrops</h1>
+          <p>A Time Series Dataset for Crop Type Mapping</p>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+
+
+<p>
+<h5>Evaluation Results</h5>
+Explore the evaluation results qualitatively <img height=20px src="arrow-right-solid.svg"></img><br>
+and quantitatively <img height=20px src="arrow-down-solid.svg"></img>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Model</th>
+      <th scope="col">Overall Accuracy</th>
+      <th scope="col">Average Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Transformer</th>
+      <td>xx.xx</td>
+      <td>xx.xx</td>
+    </tr>
+    <tr>
+      <th scope="row">LSTM</th>
+      <td>xx.xx</td>
+      <td>xx.xx</td>
+    </tr>
+    <tr>
+      <th scope="row">StarRNN</th>
+      <td>xx.xx</td>
+      <td>xx.xx</td>
+    </tr>
+    <tr>
+      <th scope="row">TempCNN</th>
+      <td>xx.xx</td>
+      <td>xx.xx</td>
+    </tr>
+  </tbody>
+</table>
+<small class="text-muted">last updated xx.xx.xx</small>
+
+    </div>
+  <div class="col-7">
+    <iframe width="100%" height="100%" frameborder="0" src="https://marccoru.carto.com/builder/b543a251-2f45-4b73-8d4c-6e7c1566024f/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+  </div>
+
+</div>
+
+  <div class="row">
+    <div class="col-4">
+
+      <h5>Python Package</h5>
+
+      The dataset, model source codes and pretrained weights can be obtained via
+      a python package. Instlal with
+      <pre><code class="bash">pip install breizhcrops</code></pre>
+      and run the minimal working example
+      <pre><code class="python">
+from breizhcrops import BreizhCrops, models
+x, y, field_id = BreizhCrops("frh04")[0]
+model = models.pretrained("Transformer")
+y_pred = model(x.unsqueeze(0))
+      </code></pre>
+      to get started.
+    </div>
+    <div class="col-4">
+      <h5>Publication and Source</h5>
+      <p>
+      <a class="github-button" href="https://github.com/dl4sits/breizhcrops/fork" data-icon="octicon-repo-forked" aria-label="Fork dl4sits/breizhcrops on GitHub">Fork</a>
+      and
+      <a class="github-button" href="https://github.com/dl4sits/breizhcrops" data-icon="octicon-star" aria-label="Star dl4sits/breizhcrops on GitHub"></a>
+      on <a href="https://github.com/dl4sits/breizhcrops" >Github</a> and cite our dataset
+      </p>
+      <pre><code class="bibtex">
+        @article{
+          asd:asd
+        }
+      </code></pre>
+
+    </div>
+    <div class="col-4">
+
+      <h5>Acknowledgements</h5>
+
+      <ul>
+        <li>IGN for data</li>
+        <li>Source code for models</li>
+        <li>Others?</li>
+      </ul>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+        <small class="text-muted">
+          <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Marc Rußwurm</p>
+        </small>
+      </footer>
+
+    </body>
+</html>
