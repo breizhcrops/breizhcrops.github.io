@@ -29,19 +29,37 @@
   margin-bottom: 60px
 }
 .jumbotron{
-  /* background-color: #9BC4E2; */
+  background-color: #0065bd;
+  color:#ffffff;
+}
+
+div.left {
+  float: left;
+}
+
+div.right {
+  float: right;
 }
 </style>
 
 </head>
 
-    <body>
-      <div class="container">
-      <div class="jumbotron">
-          <h1>Breizhcrops</h1>
-          <p>A Satellite Time Series Dataset for Crop Type Mapping</p>
+<body>
+  <div class="container">
+  <div class="jumbotron">
+    <div class="row" style="margin-bottom: 0px;">
+      <div class="col-7" style="">
+        <h1>Breizhcrops</h1>
+        <p>A Satellite Time Series Dataset for Crop Type Mapping</p>
+      </div>
+      <div class="col-5">
+        <img style="margin-right:20px" height="50px" src="logo_tum.png"></img>
+        <img height="80px" src="logo_irisa.png"></img>
       </div>
     </div>
+  </div>
+
+</div>
 
 <div class="container">
   <div class="row">
@@ -173,7 +191,7 @@ y_pred = model(x.unsqueeze(0))
 
 <footer class="footer">
         <small class="text-muted">
-          <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Marc Rußwurm</p>
+          <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Marc Rußwurm</p> <p><a href=impressum.html>Impressum</a></p>
         </small>
       </footer>
 
